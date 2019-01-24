@@ -4,12 +4,12 @@
 
 namespace garage {
     namespace math {
-        template<class T=double, int w, int h>
+        template<class T=double, int width=3, int height=3>
         struct matrix {
         private:
-            std::array<std::array<T, w>, h> data;
+            std::array<std::array<T, width>, height> data;
         public:
-dawd
+
         };
     }
 }

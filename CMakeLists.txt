@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(src)
 
-add_library(${PROJECT_NAME} STATIC src/main.cpp)
+add_library(${PROJECT_NAME} STATIC src/garage_math/main.cpp)
 target_include_directories(${PROJECT_NAME} INTERFACE src)

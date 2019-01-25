@@ -13,7 +13,7 @@ namespace garage {
                 return data[0];
             }
             T& y() const {
-                return data[1;];
+                return data[1];
             }
             T& z() const {
                 return data[2];

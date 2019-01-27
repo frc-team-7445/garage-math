@@ -7,22 +7,25 @@ namespace garage {
         template<class T=double, int size=3>
         struct vector {
         private:
-            std::array<T, size> data;
+            std::array<T, size> elements;
         public:
-            T& x() const {
-                return data[0];
+            std::array<T, size>& data() {
+                return elements;
             }
-            T& y() const {
-                return data[1];
+            T& x() {
+                return elements[0];
             }
-            T& z() const {
-                return data[2];
+            T& y() {
+                return elements[1];
+            }
+            T& z() {
+                return elements[2];
             }
             friend vector operator+(const vector& a, const vector& b) {
 
             }
             T& operator [](int i) const {
-                return data[i];
+                return elements[i];
             }
         };
     }

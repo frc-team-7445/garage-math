@@ -7,7 +7,7 @@ namespace garage {
         template<class T=double, int width=3, int height=3>
         struct matrix {
         private:
-            std::array<std::array<T, width>, height> data;
+            std::array<std::array<T, width>, height> elements;
         public:
 
         };

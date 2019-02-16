@@ -21,5 +21,10 @@ namespace garage {
         T clamp(const T value, const T lower, const T upper) {
             return value <= lower ? lower : value >= upper ? upper : value;
         }
+
+        template<typename T>
+        T threshold(const T value, const T threshold) {
+            return (value > T(0) ? value : -value) > threshold ? value : T(0);
+        }
     }
 }

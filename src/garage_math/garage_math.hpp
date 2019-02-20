@@ -24,7 +24,17 @@ namespace garage {
 
         template<typename T>
         T threshold(const T value, const T threshold) {
-            return (value > T(0) ? value : -value) > threshold ? value : T(0);
+            return abs(value) > threshold ? value : T(0);
+        }
+
+        template<typename T>
+        T abs(const T value) {
+            return value < T(0) ? -value : value;
+        }
+
+        template<typename T>
+        bool withinRange(const T value, const T target, const T threshold) {
+            return abs(target - value) < threshold;
         }
     }
 }

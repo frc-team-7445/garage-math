@@ -36,5 +36,10 @@ namespace garage {
         bool withinRange(const T value, const T target, const T threshold) {
             return abs(target - value) < threshold;
         }
+
+        template<typename T>
+        T axis(const bool positiveInput, const bool negativeInput) {
+            return (positiveInput ? T(1) : T(0) + negativeInput ? T(-1) : T(0));
+        }
     }
 }

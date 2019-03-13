@@ -3,6 +3,8 @@
 #include <garage_math/matrix.hpp>
 #include <garage_math/vector.hpp>
 
+#include <cmath>
+
 namespace garage {
     namespace math {
         template<typename T>
@@ -40,6 +42,14 @@ namespace garage {
         template<typename T>
         T axis(const bool positiveInput, const bool negativeInput) {
             return (positiveInput ? T(1) : T(0) + negativeInput ? T(-1) : T(0));
+        }
+
+        inline double fixAngle(double angle) {
+            angle = std::fmod(angle, 360.0);
+            if (absolute(angle) > 180.0) {
+                angle = (angle > 0) ? (angle - 360.0) : (angle + 360.0);
+            }
+            return angle;
         }
     }
 }

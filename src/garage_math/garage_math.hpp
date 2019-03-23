@@ -5,6 +5,8 @@
 
 #include <cmath>
 
+#define GARAGE_PI 3.14159265358979323846
+
 namespace garage {
     namespace math {
         template<typename T>
@@ -42,6 +44,10 @@ namespace garage {
         template<typename T>
         T axis(const bool positiveInput, const bool negativeInput) {
             return (positiveInput ? T(1) : T(0) + negativeInput ? T(-1) : T(0));
+        }
+
+        inline double d2r(double degrees) {
+            return (degrees * GARAGE_PI) / 180.0;
         }
 
         inline double fixAngle(double angle) {
